@@ -85,7 +85,7 @@ The system use the spring framework and MySQL database to provide development en
 
 项目基于JavaEE技术开发和实现。使用Spring框架作为容器来搭建运行平台，同时可以提供良好的扩展性和对象生命周期的管理。通过MySql数据库来对数据进行持久化。Druid连接池是JDBC连接池的实现之一，可以用来缓存应用程序与数据库之间进行通信和传输的连接，这样可以大大减少创建数据库连接所消耗的时间[7] 。使用MyBatis作为ORM框架来完成JavaBean与数据库的映射，通过灵活的动态SQL技术来对数据库进行操作，大大减少了数据库操作的繁琐。使用BootStrap作为前端框架进行布局和提供控件的支持，使用JQuery来提高Web交互体验，使用ECharts来进行数据的可视化绘制。如图2-1所示，是系统整体的技术架构，包括展示层，服务器和数据库三个部分。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/90f0a62f01b18a0fb2725a14a6f10372.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/90f0a62f01b18a0fb2725a14a6f10372.writebug)
 
 实验工具和实现环境如表2-1所示：
 
@@ -117,7 +117,7 @@ Spring框架使用可插拔的MVC架构提供了一个功能齐全的MVC框架�
 
 如图2-2所示，展示的Spring MVC框架的请求处理流程图。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/903523d58733a5ef63d3ec580fa6f4c6.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/903523d58733a5ef63d3ec580fa6f4c6.writebug)
 
 当用户发送的HTTP请求到达WebServer后，DispatcherServlet是整个程序的入口点，所有的请求都会被DispatcherServlet说处理，它将会调用指定的处理器来映射请求URL和处理器，并将请求数据进行处理和转换，传递给Controller来进行页面逻辑的导航和业务逻辑的代理。控制器会使用用户请求的参数来调用Service接口，经过实际的业务逻辑处理后，将返回的数据封装到Model中并传送到Controller，每一个Controller都会有一个与之关联ModelAndView对象，封装了数据模型Model和视图View的逻辑名称，Controller会将ModelAndView对象传递给给VierResolver，根据设置生成指定的视图类型，并确认真实视图文件路径，之后通过Model数据来渲染生成视图结果，最终将结果通过Response返回到客户端。这样就完成了一个典型的基于MVC模型的HTTP请求过程[10] 。
 
@@ -153,7 +153,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 从系统角色的角度出发对系统的功能可分为：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/3586e861111ba8f81d989fbe2b836687.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/3586e861111ba8f81d989fbe2b836687.writebug)
 
 #### 3.2.1.1 学生，用例图如图3-1所示，主要功能有：
 
@@ -171,7 +171,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 - **评价学生**：登陆系统后，也可以选择对学生进行评价。根据教师授课课程列出所有选课学生，然后可以对学生逐个评价，每个学生只能评价一次
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/f42b6be9b2a8ee7e280d1e1947f8f6e6.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/f42b6be9b2a8ee7e280d1e1947f8f6e6.writebug)
 
 #### 3.2.1.3 管理员，用例图如图3-3所示，主要功能有：
 
@@ -185,7 +185,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 - **数据导入**：数据导入即通过教务系统下载的Excel 2003格式的导出文件，通过导入页面上传到系统后后台自动解析并处理，然后将解析到的学生，教师，课程等信息导入到数据库当中。系统在使用前必须要将必要的数据导入到系统后才能开始正常的评教工作
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/a7046d5eb0ae2039db13400836260397.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/a7046d5eb0ae2039db13400836260397.writebug)
 
 ### 3.2.2 功能模块划分
 
@@ -199,7 +199,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 - **数据导入**：包含课程信息导入，选课信息导入，学生信息导入和教师信息导入
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/2ff722c8c8a74d21f99a00e2fb58f208.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/2ff722c8c8a74d21f99a00e2fb58f208.writebug)
 
 ### 3.2.3  数据流向
 
@@ -207,7 +207,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 如图3-5的系统数据流图，表示系统内部数据的流向。系统管理员维护基本信息和创建评教指标，生成评教批次，使得系统的参加评教的角色可以进行评教表的填写。当评教表填写完成时，系统会自动将参加的评教人，和评教对象，课程，时间，评教批次和评教结果等内容封装到评教结果表中并保存到数据库，当一定的时机触发评教结果查询的时候将会自动进行数据的统计和分析，并生成统计记录存放到相应的表中。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/a64d5f8113ef58f4e9023752167f2472.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/a64d5f8113ef58f4e9023752167f2472.writebug)
 
 ## 3.3 系统非功能性需求分析
 
@@ -251,7 +251,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 在Spring MVC中，控制器Controller是用来进行页面逻辑导航和对服务层进行代理的，视图View对应于表现层，根据输出类型的不同而使用不同的视图技术来展示数据格式化形式，而Service层对应于业务逻辑层，系统所有重要的业务逻辑的都会在Service层完成。如果Service层需要与数据库通信，就通过调用数据访问层（DAL）来对数据库进行操作。这样就可以达到层次结构分明，可扩展的特点。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/f56f3b488ad4dfe473da6bc47dc8969c.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/f56f3b488ad4dfe473da6bc47dc8969c.writebug)
 
 图4-1所示为项目整体的目录结构，可分为配置（Config），源代码（Src），系统资源目录（WebRoot）三个部分。其中配置目录主要存放Spring的配置文件，数据库的连接信息，数据导入映射关系，系统日志的配置文件，MyBatis配置文件和系统的一些属性配置等文件。通过将系统的配置文件统一的存放管理是为了方便程序可以准确的定位配置文件的位置并能够顺利的加载执行，同时也更加方便的查看和修改配置文件。Src目录是系统源代码的存放目录，其中主要有对应于三层架构中的Controller，service和dao的三个目录，此外还有持久对象，工具，基本类，枚举，拦截器，控制器，转换器等目录结构。WebRoot目录是Web项目的资源根目录，含有用于Web页面展示和渲染的静态资源CSS，JS，Image等，还有非常主要的动态页面JSP文件，控制器需要返回的动态页面主要就存放在这里。
 
@@ -277,7 +277,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 如果用户每次登陆都需要选择登陆的角色会给登陆带来麻烦，所以在用户第一次登陆成功后，默认会记住用户的登陆的角色，将登陆角色类型存储在浏览器的Cookie中，当用户下次登陆中，默认选择用户上次登陆的角色，这样将会使得登陆更加的便捷。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/f1da461870ef7e621b3a0a2c304d953c.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/f1da461870ef7e621b3a0a2c304d953c.writebug)
 
 ## 4.4 基本信息管理模块设计
 
@@ -310,7 +310,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 | /foo/delete | 删除   | 0    | 1    | 1    | 0    |
 | /foo/add    | 添加   | 1    | 1    | 1    | 1    |
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/5cd71ae996be44f7355bc9c196722fd7.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/5cd71ae996be44f7355bc9c196722fd7.writebug)
 
 ### 4.4.3 评教相关信息管理
 
@@ -326,13 +326,13 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 评教指标是主要是用来管理和维护打分表，同时可以随时的创建和修改评教表，使得评教指标的体系更加的科学和合理。一个合理的评教指标可以充分的反应出受评对象的真实情况，有利于后续的反馈和改进。评教指标设计的过程是对评教表进行抽象的过程，一个典型的评教表如图4-4所示。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/d76408169a0d915d8b09bf086a1869d3.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/d76408169a0d915d8b09bf086a1869d3.writebug)
 
 一个标准的评教表包含的内容有：评教表名，类型，评教须知，表项，打分表，问题列表，总分，评价级别。其中表项，打分表，问题列表可以有多个。
 
 评教指标可以创建，修改和删除，只有没有使用的评教表才可以删除，图4-5所示为删除评教表的流程：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/f93e0bfda8f52da570230314566cfad7.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/f93e0bfda8f52da570230314566cfad7.writebug)
 
 ### 4.5.2 评教批次设计
 
@@ -344,7 +344,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 评教有四种类型。学生评价教师，教师评价学生，教师评价教师和领导评价教师。其中对教师的评价体现在对教师所授课程的评价，最终反映在教师得分的影响上。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/5629fee3681578834acc23cd2f2cfc98.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/5629fee3681578834acc23cd2f2cfc98.writebug)
 
 一个基本的评教流程如图4-6所示。首先判断当前时间是否在评教批次时间内，如果不是，那么就只能进行数据查询的操作，不能评价。否则就展示角色可评价的所有对象，进入后展示出评教表进行打分和问题的填写。如果填写没有问题就保存到数据库中，结束评教流程。
 
@@ -378,7 +378,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 评教结果的查看页面布局如图4-7所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/b9875b160171483059afbe9d2a62b017.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/b9875b160171483059afbe9d2a62b017.writebug)
 
 ## 4.6 数据导入设计
 
@@ -390,7 +390,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 为了防止Excel字段的变化导致无法正常读取的情况，使用一个额外的配置文件来将Excel中的字段名与对象的属性设计映射关系。先读取Excel对应字段的数据，然后通过字段名映射到对象的属性名，之后根据属性名调用对应的setter方法，通过反射动态生成对象并存储到List中，所有数据都读取完成后，将List中的数据保存到数据库。在保存数据到数据库的过程中，为了方便查看导入结果，加入了导入过程的统计信息，包含解析到的数据记录数，成功导入数据库的记录数，数据库已经存在而舍弃的记录数和导入失败的记录，以及失败的原因。当数据导入完成后将显示导入结果的统计信息。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/de013db06a626c1d6df770b52573fd20.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/de013db06a626c1d6df770b52573fd20.writebug)
 
 ## 4.7 系统数据库设计
 
@@ -400,7 +400,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 数据实体的关系可以用ER图来表示，系统主要表结构如图4-9。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/5dc48cd1eb1559750bb6f665b529d6a4.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/5dc48cd1eb1559750bb6f665b529d6a4.writebug)
 
 ### 4.7.2 数据表结构设计
 
@@ -458,7 +458,7 @@ MyBatis是一个基于Java的持久层ORM框架。它是一个具有Sql语句查
 
 系统登陆的界面如图5-1所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/d90ff9b055233b75544880468961659e.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/d90ff9b055233b75544880468961659e.writebug)
 
 系统登陆输入账号密码，如果尝试多次登陆还需要输入验证码。选择用户类型后可以登陆到系统。
 
@@ -518,11 +518,11 @@ response.addCookie(cookie);
 
 评教指标列表如图5-2所示，可以对指标进行修改，删除和创建。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/ad7ae07cd706de402c76a299b7eb6003.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/ad7ae07cd706de402c76a299b7eb6003.writebug)
 
 点击新建评教指标可以跳转到添加评教表的页面，如图5-3所示。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/04ebc0ea4b25c2ad0ab470ddbf10450f.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/04ebc0ea4b25c2ad0ab470ddbf10450f.writebug)
 
 填写一个评教表完整的信息后，可以随意的添加和删除任一项内容，实现评教表的灵活和可自定义。同时在指定的位置添加输入提示，防止输入错误。
 
@@ -532,15 +532,15 @@ response.addCookie(cookie);
 
 当教师登陆后，可以选择评价相同课程组的课程，也可以选择对自己所授课程的学生进行评价。当教师选择评价学生的界面如图5-4所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/c8a38885c868fd59c7c40e4cd839bd67.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/c8a38885c868fd59c7c40e4cd839bd67.writebug)
 
 点击任意课程，下方将会显示选择该课程的所有学生列表，点击“去评价”可以对学生进行评价。评价表如图5-5所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/b62f4df0e8a768325f5b3ecdac4c3d67.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/b62f4df0e8a768325f5b3ecdac4c3d67.writebug)
 
 评价表填写完成后提交，系统会将评价表和评教结果保存到数据库中。评教完成后可以查看该学生评教结果，如图5-6所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/1fafa219f46e166518802c70788924ec.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/1fafa219f46e166518802c70788924ec.writebug)
 
 学生详情页面将会展示出学生基本信息，平均得分，各个学期得分统计，学期得分趋势图，和各批次的评教结果表等信息。 
 
@@ -548,11 +548,11 @@ response.addCookie(cookie);
 
 数据导入的实现界面如图5-7所示。分别有课程信息，学生选课信息，教师信息和学生信息导入4种选项。以课程信息导入为例，将包含所有的课程信息的Excel文件上传后，课程信息将会被解析被保存到数据库中。如果上传文件过大，文件不是以.xls后缀结尾的文件，不是标准Excel 2003文件，Excel内容检测到不是课程信息，选择的学期和Excel文件中解析到的学期不一致等错误都会终止数据导入流程，并在前台展示出对应的错误信息。
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/9a6b8583e4d95ed806727f157c65c0e5.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/9a6b8583e4d95ed806727f157c65c0e5.writebug)
 
 如果文件解析成功并在导入过程中没有发生错误，页面会跳转到导入结果页，展示导入过程中的各项统计数据，如图所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/8039d1e01475c6e742564ee3a90c7f1d.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/8039d1e01475c6e742564ee3a90c7f1d.writebug)
 
 ## 5.2 安全和稳定性实现
 
@@ -562,7 +562,7 @@ response.addCookie(cookie);
 
 数据效验体现在前端的表单效验和后端程序的效验。本系统前端的表单效验使用的JQuery Validation，通过在页面编写JS代码或者在HTML标签内使用效验参数等方法实现表单效验[13] 。如图5-9 是修改密码页面数据效验的示例：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/4570328786ab1749e74e336b6b667405.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/4570328786ab1749e74e336b6b667405.writebug)
 
 页面使用Js效验代码的代码如下：
 
@@ -648,7 +648,7 @@ public class BaseTest {
 
 通过继承测试基类，就可以使用Spring提供的AutoWired注解来注入Controller，Service，Dao等组件进行单元测试。测试成功时代码如图5-10所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/2eb8a8b1e827e70369b0ce931474c66f.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/2eb8a8b1e827e70369b0ce931474c66f.writebug)
 
 ### 5.3.2 功能测试
 
@@ -670,7 +670,7 @@ public class BaseTest {
 
 压测过程中使用了2台并发机器，每台机器20个用户并发，对系统主页，登陆，学生查询和课程查询等模块进行并发访问，得到的测试结果如图5-11所示：
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/b1a9c29707ee91e2130a4edc507153d9.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/b1a9c29707ee91e2130a4edc507153d9.writebug)
 
 测试结果是有40个用户并发时，课程管理相关页面的响应时间甚至达到了7s，通过查看服务器出网流量发现已经达到1381kb/s，可以看出服务器的带宽已经达到峰值，如果系统使用5Mbps的带宽，系统的响应时间和TPS将会大大增加。在整个测试的过程中，CPU的使用率占用仅8%，也提现出带宽瓶颈对系统的影响非常严重。
 
@@ -678,11 +678,11 @@ public class BaseTest {
 
 **TPS压测结果图**
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/1e305f20932d0eef8b7e01ab4238d1e3.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/1e305f20932d0eef8b7e01ab4238d1e3.writebug)
 
 **系统响应时间测试结果图**
 
-![](http://www.write-bug.com/myres/static/uploads/2021/10/19/9fad44cc095ff10ca2ff2fccd0cc20aa.writebug)
+![](http://www.writebug.com/myres/static/uploads/2021/10/19/9fad44cc095ff10ca2ff2fccd0cc20aa.writebug)
 
 通过压力测试，可以及时的预测系统可能会发生的异常情况，找到影响响应时间过高的瓶颈原因所在，及时的进行系统调优，可以提高系统性能和稳定性，提升用户体验。
 
